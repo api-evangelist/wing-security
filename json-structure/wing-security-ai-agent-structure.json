@@ -1,0 +1,20 @@
+{
+  "name": "AI Agent",
+  "description": "Structure of an AI agent object discovered by Wing Security.",
+  "fields": [
+    { "name": "id", "type": "string", "required": true, "description": "Unique identifier." },
+    { "name": "name", "type": "string", "required": true, "description": "Agent name." },
+    { "name": "type", "type": "string", "required": true, "description": "Agent type: Code Assistant, Workflow Agent, Chat Assistant, Data Agent, DevOps Agent, Custom Agent." },
+    { "name": "vendor", "type": "string", "required": false, "description": "AI agent provider." },
+    { "name": "owner", "type": "string", "required": false, "description": "Organizational owner." },
+    { "name": "discoveryMethod", "type": "string", "required": false, "description": "Discovery mechanism." },
+    { "name": "permissions", "type": "array<object>", "required": false, "description": "Permissions granted to the agent." },
+    { "name": "dataAccess", "type": "array<string>", "required": false, "description": "Data types accessible by the agent." },
+    { "name": "riskScore", "type": "integer", "required": false, "description": "Numerical risk score (0-100)." },
+    { "name": "riskLevel", "type": "string", "required": true, "description": "Risk level: Critical, High, Medium, Low, Unknown." },
+    { "name": "status", "type": "string", "required": true, "description": "Governance status: Approved, Unapproved, Blocked, Under Review, Shadow." },
+    { "name": "threatIndicators", "type": "array<object>", "required": false, "description": "MITRE ATT&CK mapped threat indicators." },
+    { "name": "firstSeen", "type": "string (date-time)", "required": false, "description": "Discovery timestamp." },
+    { "name": "lastSeen", "type": "string (date-time)", "required": false, "description": "Most recent activity timestamp." }
+  ]
+}

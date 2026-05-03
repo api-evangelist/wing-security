@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/wing-security/blob/main/json-schema/wing-security-saas-app-schema.json",
+  "title": "SaaS Application",
+  "description": "A SaaS application discovered and cataloged by Wing Security's SSPM platform.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the SaaS application."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the SaaS application."
+    },
+    "category": {
+      "type": "string",
+      "description": "The functional category of the application (e.g., Productivity, Security, DevTools)."
+    },
+    "vendor": {
+      "type": "string",
+      "description": "The company or organization that provides the SaaS application."
+    },
+    "riskScore": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "A numerical risk score (0-100) assigned to the application based on permissions, data access, and known vulnerabilities."
+    },
+    "riskLevel": {
+      "type": "string",
+      "enum": ["Critical", "High", "Medium", "Low", "Unknown"],
+      "description": "Categorical risk level for this application."
+    },
+    "discoverySource": {
+      "type": "string",
+      "description": "How the application was discovered (e.g., OAuth, IdP, Network)."
+    },
+    "users": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of user identifiers who have granted this application access."
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scope": { "type": "string" },
+          "description": { "type": "string" },
+          "sensitive": { "type": "boolean" }
+        }
+      },
+      "description": "OAuth scopes or permissions granted to this application."
+    },
+    "connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "targetApp": { "type": "string" },
+          "connectionType": { "type": "string" },
+          "dataShared": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "description": "App-to-app connections from this application to other SaaS tools."
+    },
+    "misconfigurations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "severity": { "type": "string" },
+          "remediation": { "type": "string" }
+        }
+      },
+      "description": "Security misconfigurations identified in this application."
+    },
+    "lastSeen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the most recent activity observed for this application."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Active", "Inactive", "Blocked", "Under Review"],
+      "description": "Current governance status of the application."
+    }
+  },
+  "required": ["id", "name", "riskLevel", "status"]
+}

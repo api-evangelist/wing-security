@@ -1,0 +1,122 @@
+vocabulary:
+  name: Wing Security Vocabulary
+  description: >-
+    Domain vocabulary for Wing Security covering AI agent security, SaaS
+    security posture management, identity threat detection, and related
+    concepts in the AI and SaaS security landscape.
+  version: '2026-05-03'
+  tags:
+    - AI Security
+    - Identity Threat Detection
+    - ITDR
+    - SaaS Security
+    - SSPM
+
+  domains:
+    - name: AI Security
+      description: Terms related to securing AI agents and tools in enterprise environments.
+      terms:
+        - term: AI Agent
+          definition: >-
+            An autonomous software entity that uses AI to perform tasks, access
+            data, and interact with systems on behalf of users or processes.
+        - term: Shadow AI
+          definition: >-
+            AI tools and agents deployed within an organization without formal
+            IT or security approval, creating ungoverned risk exposure.
+        - term: AI Discovery
+          definition: >-
+            The automated process of identifying all AI tools, agents, and
+            integrations active in an organization's environment.
+        - term: AI Hygiene
+          definition: >-
+            Best practices and controls ensuring AI tools are properly
+            configured, governed, and used according to security policies.
+        - term: AI Supply Chain Risk
+          definition: >-
+            Security threats introduced through third-party AI tools, models,
+            plugins, or integrations that an organization depends upon.
+        - term: Authorization Bypass
+          definition: >-
+            A security vulnerability where an AI agent or integration gains
+            access to resources beyond its intended permissions.
+
+    - name: SaaS Security
+      description: Terms related to SaaS application security and posture management.
+      terms:
+        - term: SSPM
+          definition: >-
+            SaaS Security Posture Management — a category of security tools
+            that continuously monitor and manage the security configuration of
+            SaaS applications.
+        - term: Shadow IT
+          definition: >-
+            Technology systems and applications used within an organization
+            without explicit organizational approval or IT oversight.
+        - term: App-to-App Connection
+          definition: >-
+            OAuth or API-based integrations between SaaS applications that
+            create non-human identity pathways for data and access flows.
+        - term: Non-Human Identity
+          definition: >-
+            A service account, API token, OAuth grant, or agent credential
+            that represents an application rather than a human user.
+        - term: SaaS Inventory
+          definition: >-
+            A comprehensive catalog of all SaaS applications, integrations,
+            and connected tools used within an organization.
+        - term: Misconfiguration
+          definition: >-
+            An incorrect or insecure setting in a SaaS application that
+            creates unintended security exposure.
+
+    - name: Identity and Threat
+      description: Terms related to identity threat detection and response.
+      terms:
+        - term: ITDR
+          definition: >-
+            Identity Threat Detection and Response — security capabilities
+            focused on detecting and responding to threats targeting user and
+            service identities.
+        - term: UEBA
+          definition: >-
+            User and Entity Behavior Analytics — security analytics that
+            detect anomalous behavior patterns indicating potential threats.
+        - term: Attack Path
+          definition: >-
+            The sequence of steps and compromised resources an attacker would
+            use to achieve a malicious objective.
+        - term: MITRE ATT&CK
+          definition: >-
+            A globally-accessible knowledge base of adversary tactics and
+            techniques based on real-world observations, used to describe
+            and classify attack behaviors.
+        - term: Remediation Playbook
+          definition: >-
+            A predefined set of automated or guided steps for responding to
+            a specific security threat or misconfiguration.
+        - term: Token Revocation
+          definition: >-
+            The act of invalidating an access token or OAuth grant to
+            immediately remove an AI agent's or application's access.
+
+    - name: Platform
+      description: Wing Security platform-specific concepts.
+      terms:
+        - term: Global App Catalog
+          definition: >-
+            Wing Security's reference database enriching discovered applications
+            with context including purpose, permissions, known risks, and
+            behavioral patterns.
+        - term: Continuous Observability
+          definition: >-
+            Real-time monitoring and analysis of AI agent and SaaS application
+            activity to detect anomalies and security events.
+        - term: Artemis AI
+          definition: >-
+            Wing Security's AI-powered detection engine that uses agentic
+            reasoning for threat hunting and security analysis.
+        - term: SCuBA Framework
+          definition: >-
+            Secure Cloud Business Applications — a CISA framework providing
+            security configuration guidance for cloud productivity applications.

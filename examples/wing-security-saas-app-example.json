@@ -1,0 +1,44 @@
+{
+  "id": "app-github-copilot-001",
+  "name": "GitHub Copilot",
+  "category": "AI Code Assistant",
+  "vendor": "GitHub (Microsoft)",
+  "riskScore": 65,
+  "riskLevel": "High",
+  "discoverySource": "OAuth",
+  "users": ["user-alice@example.com", "user-bob@example.com", "user-charlie@example.com"],
+  "permissions": [
+    {
+      "scope": "repo",
+      "description": "Full access to repositories including private repositories",
+      "sensitive": true
+    },
+    {
+      "scope": "read:user",
+      "description": "Read access to user profile information",
+      "sensitive": false
+    },
+    {
+      "scope": "workflow",
+      "description": "Ability to update GitHub Actions workflow files",
+      "sensitive": true
+    }
+  ],
+  "connections": [
+    {
+      "targetApp": "Slack",
+      "connectionType": "Webhook",
+      "dataShared": ["Code snippets", "Pull request notifications"]
+    }
+  ],
+  "misconfigurations": [
+    {
+      "id": "misc-001",
+      "title": "Overly broad repository access",
+      "severity": "High",
+      "remediation": "Restrict OAuth scope to specific repositories needed for the workflow"
+    }
+  ],
+  "lastSeen": "2026-05-03T10:30:00Z",
+  "status": "Under Review"
+}

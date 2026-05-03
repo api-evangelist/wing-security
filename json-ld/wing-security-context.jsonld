@@ -1,0 +1,32 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "wing": "https://wing.security/vocab/",
+    "SaaSApplication": "wing:SaaSApplication",
+    "AIAgent": "wing:AIAgent",
+    "riskScore": "wing:riskScore",
+    "riskLevel": "wing:riskLevel",
+    "permissions": "wing:permissions",
+    "connections": "wing:connections",
+    "misconfigurations": "wing:misconfigurations",
+    "threatIndicators": "wing:threatIndicators",
+    "discoverySource": "wing:discoverySource",
+    "discoveryMethod": "wing:discoveryMethod",
+    "dataAccess": "wing:dataAccess",
+    "owner": "wing:owner",
+    "status": "wing:status",
+    "firstSeen": "wing:firstSeen",
+    "lastSeen": "wing:lastSeen",
+    "mitreTechnique": "wing:mitreTechnique",
+    "shadowAI": "wing:shadowAI",
+    "shadowIT": "wing:shadowIT",
+    "sspm": "wing:sspm",
+    "itdr": "wing:itdr",
+    "name": "schema:name",
+    "description": "schema:description",
+    "vendor": "schema:provider",
+    "category": "schema:category",
+    "SoftwareApplication": "schema:SoftwareApplication",
+    "Organization": "schema:Organization"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "SaaS Application",
+  "description": "Structure of a SaaS application object in the Wing Security platform.",
+  "fields": [
+    { "name": "id", "type": "string", "required": true, "description": "Unique identifier." },
+    { "name": "name", "type": "string", "required": true, "description": "Application name." },
+    { "name": "category", "type": "string", "required": false, "description": "Functional category." },
+    { "name": "vendor", "type": "string", "required": false, "description": "Application vendor." },
+    { "name": "riskScore", "type": "integer", "required": false, "description": "Numerical risk score (0-100)." },
+    { "name": "riskLevel", "type": "string", "required": true, "description": "Risk level: Critical, High, Medium, Low, Unknown." },
+    { "name": "discoverySource", "type": "string", "required": false, "description": "How the application was discovered." },
+    { "name": "users", "type": "array<string>", "required": false, "description": "Users who granted access." },
+    { "name": "permissions", "type": "array<object>", "required": false, "description": "OAuth scopes and permissions." },
+    { "name": "connections", "type": "array<object>", "required": false, "description": "App-to-app connections." },
+    { "name": "misconfigurations", "type": "array<object>", "required": false, "description": "Detected misconfigurations." },
+    { "name": "lastSeen", "type": "string (date-time)", "required": false, "description": "Most recent activity timestamp." },
+    { "name": "status", "type": "string", "required": true, "description": "Governance status: Active, Inactive, Blocked, Under Review." }
+  ]
+}

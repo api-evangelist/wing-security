@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/wing-security/blob/main/json-schema/wing-security-ai-agent-schema.json",
+  "title": "AI Agent",
+  "description": "An AI agent or tool discovered by Wing Security's AI discovery engine.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the AI agent."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the AI agent or tool."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["Code Assistant", "Workflow Agent", "Chat Assistant", "Data Agent", "DevOps Agent", "Custom Agent"],
+      "description": "The type of AI agent."
+    },
+    "vendor": {
+      "type": "string",
+      "description": "The provider or vendor of the AI agent."
+    },
+    "owner": {
+      "type": "string",
+      "description": "The organizational owner or team responsible for this agent."
+    },
+    "discoveryMethod": {
+      "type": "string",
+      "description": "How Wing Security discovered this agent (e.g., IdP integration, API monitoring)."
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "resource": { "type": "string" },
+          "accessLevel": { "type": "string" },
+          "sensitive": { "type": "boolean" }
+        }
+      },
+      "description": "Permissions and data access granted to this AI agent."
+    },
+    "dataAccess": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Types of data this agent can access (e.g., Email, Code, Customer Data)."
+    },
+    "riskScore": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Risk score based on permissions, behavior, and threat intelligence."
+    },
+    "riskLevel": {
+      "type": "string",
+      "enum": ["Critical", "High", "Medium", "Low", "Unknown"],
+      "description": "Categorical risk assessment for this AI agent."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Approved", "Unapproved", "Blocked", "Under Review", "Shadow"],
+      "description": "Governance status of the AI agent."
+    },
+    "threatIndicators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string" },
+          "description": { "type": "string" },
+          "mitreTechnique": { "type": "string" }
+        }
+      },
+      "description": "Threat indicators detected for this agent mapped to MITRE ATT&CK."
+    },
+    "firstSeen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when this agent was first discovered."
+    },
+    "lastSeen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of most recent observed activity."
+    }
+  },
+  "required": ["id", "name", "type", "riskLevel", "status"]
+}
