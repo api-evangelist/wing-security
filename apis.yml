@@ -75,6 +75,12 @@ common:
     name: Wing Security Vocabulary
     type: Vocabulary
     description: Domain vocabulary for Wing Security platform concepts.
+  - type: Integrations
+    url: https://wing.security/partners/
+integrations:
+  - name: websights
+  - name: Go to the homepage
+  - name: Brand Name
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
