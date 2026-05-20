@@ -45,6 +45,8 @@ apis:
         url: https://wing.security/platform/
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/wing-security
   - type: Website
     url: https://www.wing.security
     name: Wing Security
