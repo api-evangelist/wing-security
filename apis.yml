@@ -45,6 +45,10 @@ apis:
         url: https://wing.security/platform/
 
 common:
+  - type: TrustCenter
+    url: security/wing-security-trust-center.yml
+  - type: DomainSecurity
+    url: security/wing-security-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/wing-security
   - type: Website
