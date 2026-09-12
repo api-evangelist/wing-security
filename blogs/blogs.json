@@ -2,23 +2,21 @@
   "repo": "wing-security",
   "feeds": [
     {
-      "source": "https://wing.security/feed/",
-      "feed_url": "https://wing.security/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "none",
-      "nature": "undetermined",
-      "nature_basis": null
-    },
-    {
       "source": "https://wing.security/platform/",
       "feed_url": "https://wing.security/platform/",
       "title": "",
       "saved": 0,
       "method": "none"
+    },
+    {
+      "source": "https://wing.security/feed/",
+      "feed_url": "https://wing.security/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "fetched": "2026-08-30T22:33:40Z",
+  "fetched": "2026-09-06T19:17:18Z",
   "post_count": 18,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
