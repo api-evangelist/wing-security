@@ -53,7 +53,6 @@ apis:
       capabilities. The platform supports webhook integrations and API-based
       connectivity for SIEM/SOAR automation workflows.
     humanURL: https://www.wing.security
-    baseURL: https://www.wing.security
     tags:
       - AI Security
       - Identity Security
